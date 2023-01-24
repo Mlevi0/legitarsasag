@@ -1,0 +1,22 @@
+﻿<Window x:Class="utazasok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:utazasok"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid">
+        
+        <ContentControl x:Name="contents" Height="auto">
+            <Grid>
+                <Label Content="Üdvözöllek a Légitársaság alkalmazásunkban" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="42" Width="500" FontFamily="Arial Rounded MT Bold" FontSize="22"/>
+                <Button x:Name="kezdes_button" Content="Járatok kereséséhez kattintson ide" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Height="46" Width="256" FontSize="16" FontFamily="Arial Narrow" Click="kezdes_button_Click"/>
+                <Grid.Background>
+                    <ImageBrush ImageSource="C:\Users\Levi\Desktop\legitarsasag\utazasok\repulo.jpg"/>
+                </Grid.Background>
+            </Grid>
+        </ContentControl>
+        
+    </Grid>
+</Window>
