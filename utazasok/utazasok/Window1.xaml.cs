@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace utazasok
 {
@@ -24,6 +25,14 @@ namespace utazasok
         public Window1()
         {
             InitializeComponent();
+
+            string[] lines = File.ReadAllLines("populacio.txt");
+            foreach (var item in lines)
+            {
+                string[] tokens = item.Split(';');
+                honnan.Items.Add(tokens[0]);
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

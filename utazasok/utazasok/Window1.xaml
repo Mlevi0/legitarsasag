@@ -11,7 +11,7 @@
        
         x:Name="win1"
      >
-    <Grid x:Name="grid2" Background="Black">
+    <Grid x:Name="grid2" >
 
         <Label Content="Honnan" HorizontalAlignment="Left" Margin="158,73,0,0" VerticalAlignment="Top" Height="53" Width="86" FontSize="16"/>
         <Label Content="Hová" HorizontalAlignment="Left" Margin="540,73,0,0" VerticalAlignment="Top" Height="53" Width="87" FontSize="16"/>
