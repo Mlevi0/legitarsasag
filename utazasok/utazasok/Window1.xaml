@@ -18,11 +18,11 @@
 
 
         <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,131,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="N/A"/>
+            <ComboBoxItem Content="N/A" IsSelected="True"/>
         </ComboBox>
 
         <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="507,131,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="N/A"/>
+            <ComboBoxItem Content="N/A" IsSelected="True"/>
         </ComboBox>
 
         <Button Content="Button" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>

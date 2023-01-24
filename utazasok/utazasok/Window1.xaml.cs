@@ -26,11 +26,11 @@ namespace utazasok
         {
             InitializeComponent();
 
-            string[] lines = File.ReadAllLines("populacio.txt");
+            string[] lines = File.ReadAllLines("utazasok.txt");
             foreach (var item in lines)
             {
                 string[] tokens = item.Split(';');
-                honnan.Items.Add(tokens[0]);
+                honnan.Items.Add(tokens[1]);
             }
 
         }
