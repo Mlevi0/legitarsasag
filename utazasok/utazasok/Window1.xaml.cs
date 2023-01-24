@@ -38,7 +38,7 @@ namespace utazasok
             DataContext = this;
 
 
-            string[] lines = File.ReadAllLines("utazasok.txt");
+            string[] lines = File.ReadAllLines("../../../../../utazasokgenerator/utazasokgenerator/bin/Debug/utazasok.txt");
             foreach (var item in lines)
             {
                 string[] tokens = item.Split(';');
@@ -47,12 +47,9 @@ namespace utazasok
                 {
                     start.Add(tokens[1]);
                 }
-
                 var ora = Convert.ToInt32(tokens[4]) / 60;
                 int perc = Convert.ToInt32(tokens[4]) - ora * 60;
                 kozvetlen_jarat.Content = tokens[1] + " - " + tokens[2] + "\n" + "Óra:Perc: " + ora + ":" + perc;
-
-
             }
             view = new ListCollectionView(lista);
 
