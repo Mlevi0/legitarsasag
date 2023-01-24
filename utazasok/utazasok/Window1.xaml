@@ -20,11 +20,15 @@
         <Label Content="Hová" HorizontalAlignment="Left" Margin="556,266,0,0" VerticalAlignment="Top" Height="53" Width="88" FontSize="16"/>
 
 
-        <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,334,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding start}" SelectionChanged="honnan_SelectionChanged">
+        <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,334,0,0"
+                  VerticalAlignment="Top" Width="120" ItemsSource="{Binding start}"
+                  SelectionChanged="honnan_SelectionChanged">
             
         </ComboBox>
 
-        <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="540,334,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding view}" DisplayMemberPath="To">
+        <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="540,334,0,0" 
+                  VerticalAlignment="Top" Width="120" ItemsSource="{Binding view}" 
+                  DisplayMemberPath="To">
             
         </ComboBox>
 

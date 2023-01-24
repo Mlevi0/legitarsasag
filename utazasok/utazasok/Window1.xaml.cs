@@ -65,14 +65,22 @@ namespace utazasok
 
         private void honnan_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             ComboBox cb = sender as ComboBox;
             string From = e.AddedItems[0] as string; 
             var view2 = view as ListCollectionView;
-            view2.Filter = (to) =>
+            //view2.Filter = (to) =>
+            //{
+            //    var f = to as Flight;
+            //    return f.From.Equals(From);
+            //};
+            view2.Filter = Szuro;
+
+            bool Szuro(object elem)
             {
-                var f = to as Flight;
+                var f = elem as Flight;
                 return f.From.Equals(From);
-            };
+            }
         }
     }
 }
