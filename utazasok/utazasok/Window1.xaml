@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:utazasok"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800"
+        Title="Window1" Height="485" Width="800"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
        
@@ -13,19 +13,27 @@
      >
     <Grid x:Name="grid2" >
 
-        <Label Content="Honnan" HorizontalAlignment="Left" Margin="158,73,0,0" VerticalAlignment="Top" Height="53" Width="86" FontSize="16"/>
-        <Label Content="Hová" HorizontalAlignment="Left" Margin="540,73,0,0" VerticalAlignment="Top" Height="53" Width="87" FontSize="16"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/repulo.jpg" Opacity="0.4" />
+        </Grid.Background>
+        <Label Content="Honnan" HorizontalAlignment="Left" Margin="158,266,0,0" VerticalAlignment="Top" Height="53" Width="86" FontSize="16"/>
+        <Label Content="Hová" HorizontalAlignment="Left" Margin="556,266,0,0" VerticalAlignment="Top" Height="53" Width="88" FontSize="16"/>
 
 
-        <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,131,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="N/A" IsSelected="True"/>
+        <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,334,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding start}" SelectionChanged="honnan_SelectionChanged">
+            
         </ComboBox>
 
-        <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="507,131,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="N/A" IsSelected="True"/>
+        <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="540,334,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding view}" DisplayMemberPath="To">
+            
         </ComboBox>
 
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,301,0,0" VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Center" Margin="0,376,0,0" VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
+        <Label Content="Közvetlen járatok:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
+        <Label Content="Legolcsóbb járatok:" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
+        <Label x:Name="kozvetlen_jarat" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White" />
+        <Label x:Name="kozvetlen_jarat2" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White"/>
+        <Label x:Name="kozvetlen_jarat3" HorizontalAlignment="Left" Margin="588,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White"/>
 
 
     </Grid>

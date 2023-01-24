@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="repulo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="repulo.jpg" />
+  </ItemGroup>
+
 </Project>
