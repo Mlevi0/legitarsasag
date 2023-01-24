@@ -29,6 +29,7 @@ namespace utazasok
         {
             Window1 Window1 = new Window1();
             contents.Content = Window1.grid2;
+            
         }
     }
 
