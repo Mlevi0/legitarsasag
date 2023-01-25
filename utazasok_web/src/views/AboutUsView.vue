@@ -91,11 +91,6 @@
 </template>
 
 <style>
-.valodicont .row .col-lg-4 {
-    display: flex;
-    justify-content: center;
-}
-
 .card {
     position: relative;
     padding: 0;
@@ -107,7 +102,7 @@
     cursor: pointer;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-
+    border-radius: 150px !important;
 }
 
 .card .card-image {
