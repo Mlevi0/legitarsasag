@@ -23,21 +23,25 @@
         <ComboBox x:Name="honnan" HorizontalAlignment="Left" Margin="141,334,0,0"
                   VerticalAlignment="Top" Width="120" ItemsSource="{Binding start}"
                   SelectionChanged="honnan_SelectionChanged">
-            
+
         </ComboBox>
 
         <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="540,334,0,0" 
                   VerticalAlignment="Top" Width="120" ItemsSource="{Binding view}" 
-                  DisplayMemberPath="To">
-            
+                  DisplayMemberPath="To" SelectedItem="{Binding Selected}">
+
         </ComboBox>
 
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,376,0,0" VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
+        <Button Content="Ár kiszámitása" HorizontalAlignment="Center" Margin="0,411,0,0" VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
         <Label Content="Közvetlen járatok:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
         <Label Content="Legolcsóbb járatok:" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
         <Label x:Name="kozvetlen_jarat" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White" />
         <Label x:Name="kozvetlen_jarat2" HorizontalAlignment="Center" Margin="0,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White"/>
         <Label x:Name="kozvetlen_jarat3" HorizontalAlignment="Left" Margin="588,48,0,0" VerticalAlignment="Top" Height="54" Width="202" Background="White"/>
+        <Label Content="Hány ember?" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Height="53" Width="114" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="337,355,0,0" x:Name="ember" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" 
+                 Width="120" Height="33" Text="{Binding emberek, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
 
     </Grid>

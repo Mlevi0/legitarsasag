@@ -23,12 +23,18 @@ namespace utazasok
     public partial class Window1 : Window
     {
         public class Flight { 
-        public string From { get; set; }
-        public string To { get; set; }
+            public string From { get; set; }
+            public string To { get; set; }
+            public int Price { get; set; }
+
         };
         public ObservableCollection<Flight> lista { get; set; } = new();
 
         public ObservableCollection<string> start { get; set; } = new();
+
+        public string emberek { get; set; }
+
+        public Flight Selected { get; set; }
 
         public ICollectionView view { get; set; }
 
@@ -42,7 +48,11 @@ namespace utazasok
             foreach (var item in lines)
             {
                 string[] tokens = item.Split(';');
-                lista.Add(new Flight() { From = tokens[1] , To = tokens[2]});
+                int km = Convert.ToInt32(tokens[3]);
+                int kmPrice = Convert.ToInt32(tokens[5]);
+
+
+                lista.Add(new Flight() { From = tokens[1] , To = tokens[2], Price = km*kmPrice});
                 if (!start.Contains(tokens[1]))
                 {
                     start.Add(tokens[1]);
@@ -57,7 +67,10 @@ namespace utazasok
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ;
+           // Flight f = hova.SelectedItem as Flight;
+            var osszeg = Convert.ToInt32(emberek) * Selected.Price;
+
+            MessageBox.Show(osszeg.ToString());
         }
 
         private void honnan_SelectionChanged(object sender, SelectionChangedEventArgs e)
