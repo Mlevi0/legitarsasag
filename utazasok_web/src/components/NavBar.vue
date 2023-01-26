@@ -11,7 +11,7 @@
         <RouterLink to="/" class="nav-link">Utazások</RouterLink>
         </li>
         <li class="nav-item">
-        <RouterLink to="/foglalas" class="nav-link">Foglalási adatok</RouterLink>
+        <RouterLink to="/foglalas" class="nav-link">Foglalás</RouterLink>
         </li>
         <li class="nav-item">
         <RouterLink to="/aboutus" class="nav-link">Rólunk</RouterLink>
