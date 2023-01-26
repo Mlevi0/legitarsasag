@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using utazasok.Model;
 
 namespace utazasok
 {
@@ -22,20 +23,8 @@ namespace utazasok
     /// </summary>
     public partial class Window1 : Window
     {
-        public class Flight { 
-            public string From { get; set; }
-            public string To { get; set; }
-            public int Price { get; set; }
-
-        };
-
-        public class Populacio
-        {
-            public int Lakossag { get; set; }
-            public string City { get; set; }
-        }
-
-        public ObservableCollection<Flight> lista { get; set; } = new();
+        static Model.FlightContext Context = new Model.FlightContext();
+        ObservableCollection<Flight> lista { get; set; } = new();
 
         public ObservableCollection<string> start { get; set; } = new();
 
@@ -62,29 +51,29 @@ namespace utazasok
             foreach (var item in lines)
             {
                 string[] tokens = item.Split(';');
-                int km = Convert.ToInt32(tokens[3]);
-                int kmPrice = Convert.ToInt32(tokens[5]);
-
-
-                lista.Add(new Flight() { From = tokens[1] , To = tokens[2], Price = km*kmPrice});
+                Flight egyjarat = new Flight() { From = tokens[1], To = tokens[2], km = Convert.ToInt32(tokens[3]), Time = Convert.ToInt32(tokens[4]), kmPrice = Convert.ToInt32(tokens[5]) };
+                egyjarat.Price = egyjarat.km * egyjarat.kmPrice;
+                lista.Add(egyjarat);
+                Context.Flights.Add(egyjarat);
                 if (!start.Contains(tokens[1]))
                 {
                     start.Add(tokens[1]);
                 }
-                var ora = Convert.ToInt32(tokens[4]) / 60;
-                int perc = Convert.ToInt32(tokens[4]) - ora * 60;
+                var ora = egyjarat.Time / 60;
+                int perc = egyjarat.Time - ora * 60;
                 kozvetlen_jarat.Content = tokens[1] + " - " + tokens[2] + "\n" + "Óra:Perc: " + ora + ":" + perc;
+                Context.SaveChanges();
             }
             view = new ListCollectionView(lista);
 
             foreach (var items in lines2)
             {
                 string[] adatok = items.Split(';');
-                
-                
                 populacio.Add(new Populacio() { City = adatok[0] ,Lakossag = Convert.ToInt32(adatok[1])});
+                Context.populaciok.Add(new Populacio() { City = adatok[0], Lakossag = Convert.ToInt32(adatok[1]) });
+                Context.SaveChanges();
             }
-
+            
         }
 
         //ár kiszámitás
@@ -137,7 +126,6 @@ namespace utazasok
 
 
                 }
-                string uzenet;
                 if (gyerekvegossz == 0)
                 {
                     MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg - gyerekvegossz) / felnottszam)
