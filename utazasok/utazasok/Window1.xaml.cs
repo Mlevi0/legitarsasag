@@ -45,6 +45,7 @@ namespace utazasok
 
         public Flight Selected { get; set; }
 
+        public string gyermekek { get; set; }
         
 
         public ICollectionView view { get; set; }
@@ -118,13 +119,27 @@ namespace utazasok
 
 
                 double vegosszeg = alaposszeg + afaossz + kerozin + populacioszazalek;
+                int felnottszam = Convert.ToInt32(emberek) - Convert.ToInt32(gyermekek);
 
-                if (Convert.ToInt32(ember.Text) > 10)
+                double gyerekvegossz = 0;
+
+                if (Convert.ToInt32(emberek) > 10)
                 {
                     vegosszeg = vegosszeg * 0.9;
                 }
 
-                MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg).ToString() + "Ft");
+                if (Convert.ToInt32(gyermekek) > 0)
+                {
+                    gyerekvegossz = vegosszeg / Convert.ToInt32(emberek);
+                    vegosszeg = vegosszeg / Convert.ToInt32(emberek);
+                    gyerekvegossz = (gyerekvegossz * 0.8) * Convert.ToInt32(gyermekek);
+                    vegosszeg = felnottszam * vegosszeg + gyerekvegossz;
+
+
+                }
+
+                MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg-gyerekvegossz)/felnottszam) 
+                    + "Ft\nEgy gyerekre jutó ár: " + Math.Round(gyerekvegossz/Convert.ToInt32(gyermekek)) + " Ft");
                 
             }
 
