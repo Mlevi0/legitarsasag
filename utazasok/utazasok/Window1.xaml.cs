@@ -28,13 +28,24 @@ namespace utazasok
             public int Price { get; set; }
 
         };
+
+        public class Populacio
+        {
+            public int Lakossag { get; set; }
+            public string City { get; set; }
+        }
+
         public ObservableCollection<Flight> lista { get; set; } = new();
 
         public ObservableCollection<string> start { get; set; } = new();
 
+        public ObservableCollection<Populacio> szamok { get; set; } = new();
+
         public string emberek { get; set; }
 
         public Flight Selected { get; set; }
+
+        
 
         public ICollectionView view { get; set; }
 
@@ -45,6 +56,7 @@ namespace utazasok
 
 
             string[] lines = File.ReadAllLines("../../../../../utazasokgenerator/utazasokgenerator/bin/Debug/utazasok.txt");
+            string[] lines2 = File.ReadAllLines("../../../../../utazasokgenerator/utazasokgenerator/bin/Debug/populacio.txt");
             foreach (var item in lines)
             {
                 string[] tokens = item.Split(';');
@@ -63,14 +75,39 @@ namespace utazasok
             }
             view = new ListCollectionView(lista);
 
+            foreach (var items in lines2)
+            {
+                string[] adatok = items.Split(';');
+                
+                
+                szamok.Add(new Populacio() { City = adatok[0] ,Lakossag = Convert.ToInt32(adatok[1])});
+            }
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           // Flight f = hova.SelectedItem as Flight;
-            var osszeg = Convert.ToInt32(emberek) * Selected.Price;
+            // Flight f = hova.SelectedItem as Flight;
+            if (ember.Text == "")
+            {
+                MessageBox.Show("Válassza ki hányan szeretnének utazni");
+            }
+            else
+            {
+                var alaposszeg = Convert.ToInt32(emberek) * Selected.Price;
+                var afaossz = Selected.Price * 0.27;
+                var kerozin = Selected.Price * 0.1;
 
-            MessageBox.Show(osszeg.ToString());
+
+
+                int vegosszeg = 0;
+
+
+
+                MessageBox.Show(emberek + " emberre jutó összeg: " + alaposszeg.ToString() + "Ft");
+            }
+
+          
         }
 
         private void honnan_SelectionChanged(object sender, SelectionChangedEventArgs e)

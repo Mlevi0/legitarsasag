@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:utazasok"
         mc:Ignorable="d"
-        Title="Window1" Height="485" Width="800"
+        Title="Window1" Height="500" Width="850"
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
        
@@ -28,7 +28,7 @@
 
         <ComboBox x:Name="hova" HorizontalAlignment="Left" Margin="540,334,0,0" 
                   VerticalAlignment="Top" Width="120" ItemsSource="{Binding view}" 
-                  DisplayMemberPath="To" SelectedItem="{Binding Selected}">
+                  DisplayMemberPath="To" SelectedItem="{Binding Selected}" >
 
         </ComboBox>
 
