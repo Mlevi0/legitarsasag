@@ -137,13 +137,18 @@ namespace utazasok
 
 
                 }
-
-                MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg-gyerekvegossz)/felnottszam) 
-                    + "Ft\nEgy gyerekre jutó ár: " + Math.Round(gyerekvegossz/Convert.ToInt32(gyermekek)) + " Ft");
-                
-            }
-
-          
+                string uzenet;
+                if (gyerekvegossz == 0)
+                {
+                    MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg - gyerekvegossz) / felnottszam)
+                    + "Ft");
+                }
+                else
+                {
+                    MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg - gyerekvegossz) / felnottszam)
+                   + "Ft\nEgy gyerekre jutó ár: " + Math.Round(gyerekvegossz / Convert.ToInt32(gyermekek)) + " Ft");
+                }   
+            }  
         }
 
         private void honnan_SelectionChanged(object sender, SelectionChangedEventArgs e)
