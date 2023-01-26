@@ -10,9 +10,15 @@
 
         <ContentControl x:Name="contents" Height="auto">
             <Grid>
-                <Label Content="Üdvözöllek a Légitársaság alkalmazásunkban" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,34,0,0" VerticalAlignment="Top" Height="42" Width="680" FontFamily="Arial Rounded MT Bold" FontSize="22"/>
-                <Button x:Name="kezdes_button" Content="Járatok kereséséhez kattintson ide" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,486,0,0" VerticalAlignment="Top" Height="46" Width="256" FontSize="16" FontFamily="Arial Narrow" Click="kezdes_button_Click"/>
-                <Label Content="Forgalmazók: Dao László, Huszár Botond, Magyari Levente" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,417,0,0" VerticalAlignment="Top" Height="42" Width="680" FontFamily="Arial Rounded MT Bold" FontSize="22"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Üdvözöllek a Légitársaság alkalmazásunkban" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                <Button x:Name="kezdes_button" Grid.Row="2" Content="Járatok keresése" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" Height="40" Width="240" FontSize="16" Click="kezdes_button_Click"/>
+                <TextBlock Grid.Row="3" Text="Forgalmazók: Dao László, Huszár Botond, Magyari Levente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
                 <Grid.Background>
                     <ImageBrush ImageSource="/repulo.jpg"/>
                 </Grid.Background>
