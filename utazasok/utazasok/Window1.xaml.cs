@@ -39,7 +39,7 @@ namespace utazasok
 
         public ObservableCollection<string> start { get; set; } = new();
 
-        public ObservableCollection<Populacio> szamok { get; set; } = new();
+        public ObservableCollection<Populacio> populacio { get; set; } = new();
 
         public string emberek { get; set; }
 
@@ -49,6 +49,7 @@ namespace utazasok
 
         public ICollectionView view { get; set; }
 
+        // generált adatok kezelése
         public Window1()
         {
             InitializeComponent();
@@ -80,11 +81,12 @@ namespace utazasok
                 string[] adatok = items.Split(';');
                 
                 
-                szamok.Add(new Populacio() { City = adatok[0] ,Lakossag = Convert.ToInt32(adatok[1])});
+                populacio.Add(new Populacio() { City = adatok[0] ,Lakossag = Convert.ToInt32(adatok[1])});
             }
 
         }
 
+        //ár kiszámitás
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             // Flight f = hova.SelectedItem as Flight;
@@ -98,13 +100,32 @@ namespace utazasok
                 var afaossz = Selected.Price * 0.27;
                 var kerozin = Selected.Price * 0.1;
 
+                int populcaiok = populacio.First(x=>x.City.Equals(Selected.To)).Lakossag;
+                double populacioszazalek = 0;
+
+                if (populcaiok <2000000)
+                {
+                    populacioszazalek = Selected.Price * 0.05;
+                }
+                else if (populacioszazalek >= 2000000 && populacioszazalek < 10000000)
+                {
+                    populacioszazalek = Selected.Price * 0.075;
+                }
+                else if (populacioszazalek >= 10000000)
+                {
+                    populacioszazalek = Selected.Price * 0.1;
+                }
 
 
-                int vegosszeg = 0;
+                double vegosszeg = alaposszeg + afaossz + kerozin + populacioszazalek;
 
+                if (Convert.ToInt32(ember.Text) > 10)
+                {
+                    vegosszeg = vegosszeg * 0.9;
+                }
 
-
-                MessageBox.Show(emberek + " emberre jutó összeg: " + alaposszeg.ToString() + "Ft");
+                MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg).ToString() + "Ft");
+                
             }
 
           
