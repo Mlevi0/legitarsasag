@@ -33,6 +33,4 @@ namespace utazasok
             contents.DataContext = Window1;
         }
     }
-
-    
 }
