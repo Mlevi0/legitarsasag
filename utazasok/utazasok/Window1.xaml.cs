@@ -61,7 +61,6 @@ namespace utazasok
                 }
                 var ora = egyjarat.Time / 60;
                 int perc = egyjarat.Time - ora * 60;
-                kozvetlen_jarat.Content = tokens[1] + " - " + tokens[2] + "\n" + "Óra:Perc: " + ora + ":" + perc;
                 Context.SaveChanges();
             }
             view = new ListCollectionView(lista);
@@ -131,6 +130,10 @@ namespace utazasok
                     MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg - gyerekvegossz) / felnottszam)
                     + "Ft");
                 }
+                else if (emberek == gyermekek)
+                {
+                    MessageBox.Show("Egy gyerekre jutó ár: " + Math.Round(gyerekvegossz / Convert.ToInt32(gyermekek)) + " Ft");
+                }
                 else
                 {
                     MessageBox.Show(emberek + " emberre jutó összeg: " + Math.Round(vegosszeg) + "Ft \n" + "Egy felnőttre jutó ár: " + Math.Round((vegosszeg - gyerekvegossz) / felnottszam)
@@ -151,11 +154,17 @@ namespace utazasok
             //    return f.From.Equals(From);
             //};
             view2.Filter = Szuro;
-
             bool Szuro(object elem)
             {
                 var f = elem as Flight;
                 return f.From.Equals(From);
+            }
+            kozvetlen_jarat.Content = "";
+            foreach (Flight item in view2)
+            {
+                var ora = item.Time / 60;
+                int perc = item.Time - ora * 60;
+                kozvetlen_jarat.Content += item.From + "-" + item.To + "\nAz utazás időtartama: " + ora + ":" + perc + "\n";
             }
         }
     }

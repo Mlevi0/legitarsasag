@@ -35,12 +35,12 @@
         <Button Content="Ár kiszámitása" HorizontalAlignment="Center" Margin="0,513,0,0"
                 VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
 
-        <Label Content="Közvetlen járat:" HorizontalAlignment="Center" Margin="0,181,0,0"
-               VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
+        <Label Content="Közvetlen járat:" HorizontalAlignment="Center" Margin="0,149,0,0"
+               VerticalAlignment="Top" Height="38" Width="114" FontSize="15"/>
 
         <Label x:Name="kozvetlen_jarat" HorizontalContentAlignment="Center"
-               HorizontalAlignment="Left" Margin="321,239,0,0" VerticalAlignment="Top"
-               Height="53" Width="202" Background="White" />
+               HorizontalAlignment="Left" Margin="312,187,0,0" VerticalAlignment="Top"
+               Height="105" Width="220" Background="White" />
 
         <Label Content="Hány ember?" HorizontalAlignment="Center" Margin="0,308,0,0"
                VerticalAlignment="Top" Height="42" Width="114" FontSize="16"/>
@@ -57,11 +57,12 @@
             TextWrapping="Wrap" VerticalAlignment="Top" 
             Width="120" Height="33" Text="{Binding gyermekek, Mode=TwoWay,
             UpdateSourceTrigger=PropertyChanged}"/>
-        <Label Content="Tájékoztató: Ezen az oldalon ki lehet választani, hogy honnan hová szeretne repülni.&#xD;&#xA; 
+        <Label Content="                                                                 Tájékoztató: &#xD;&#xA;
+               Ezen az oldalon ki lehet választani, hogy honnan hová szeretne repülni.&#xD;&#xA;
                Ezen kivül megkell adni, hogy összesen hányan szeretnének utazni és ebből hány gyermek. &#xD;&#xA;
                Ezután egy pontos összeg fog megjelenni hogy mennyibe kerülne az utazás.&#xD;&#xA;
                FONTOS: 16 év alatt nem szabad egyedül repülni!
-               " HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Height="109" Width="737" FontSize="16"/>
+               " HorizontalAlignment="Center" Margin="0,26,0,0" VerticalAlignment="Top" Height="123" Width="738" FontSize="16" HorizontalContentAlignment="center"/>
 
 
     </Grid>
