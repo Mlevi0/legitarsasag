@@ -16,12 +16,12 @@
               <div class="text-white">
                 <h1 class="mb-3">Üdvözöljük!</h1>
                 <h5 class="mb-4">Kikapcsolódásra vágyik messze az otthonától? Akkor jó helyen jár!</h5>
-                <a
+                <Router-Link
                   class="btn btn-outline-light btn-lg m-2"
-                  href="#jaratok"
+                  to="foglalas"
                   role="button"
                   rel="nofollow"
-                >Ugrás a járatokhoz!</a
+                >Ugrás a járatokhoz!</Router-Link
                 >
               </div>
             </div>
