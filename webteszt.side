@@ -1,0 +1,1139 @@
+{
+  "id": "33c375bf-8fd3-4cd0-b527-9117436103a6",
+  "version": "3.0",
+  "name": "New Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "f0b7a479-0aed-40fa-9aa5-be69522b0b35",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "501ca52d-42ab-4b54-986b-243f169c4dd5"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "501ca52d-42ab-4b54-986b-243f169c4dd5",
+      "name": "teszt1",
+      "commands": [
+        {
+          "id": "7e13d227-7cc3-43fc-bc65-bbabf890999b",
+          "command": "open",
+          "target": "http://localhost:5000/",
+          "value": "",
+          "isBreakpoint": true
+        },
+        {
+          "command": "storeWindowHandle",
+          "id": "0000-0000-0000-0000",
+          "target": "root",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "linkText=Foglalás",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "514fbea3-2f97-46bc-974b-1f4ece80c666",
+          "targets": [
+            [
+              "linkText=Foglalás",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(2) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Foglalás')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li[2]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/foglalas')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Foglalás')]",
+              "xpath:innerText"
+            ]
+          ],
+          "opensWindow": true,
+          "windowHandleName": "win586"
+        },
+        {
+          "command": "click",
+          "target": "linkText=Rólunk",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "824b49ca-7d56-4dc6-9cd2-844e2ee69ba0",
+          "targets": [
+            [
+              "linkText=Rólunk",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(3) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Rólunk')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li[3]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/aboutus')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Rólunk')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Utazások",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "767142ae-bcb3-4c98-b772-4a36f1229b0e",
+          "targets": [
+            [
+              "linkText=Utazások",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(1) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Utazások')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Utazások')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Ugrás a járatokhoz!",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "32219d86-d250-4018-ba85-916f164f0889",
+          "targets": [
+            [
+              "linkText=Ugrás a járatokhoz!",
+              "linkText"
+            ],
+            [
+              "css=.btn-outline-light",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Ugrás a járatokhoz!')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='intro-example']/div/div/div/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/foglalas')])[2]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Ugrás a járatokhoz!')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseOver",
+          "target": "linkText=Ugrás a járatokhoz!",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0426a6e7-acda-4bed-982a-7676ecfc9d5c",
+          "targets": [
+            [
+              "linkText=Ugrás a járatokhoz!",
+              "linkText"
+            ],
+            [
+              "css=.btn-outline-light",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Ugrás a járatokhoz!')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='intro-example']/div/div/div/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/foglalas')])[2]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Ugrás a járatokhoz!')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.navbar-brand > img",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "11b6efd6-9fd0-46b2-b214-0315a77ebff6",
+          "targets": [
+            [
+              "css=.navbar-brand > img",
+              "css:finder"
+            ],
+            [
+              "xpath=(//img[@alt='logo'])[1]",
+              "xpath:img"
+            ],
+            [
+              "xpath=(//div[@id='app']/nav/div/a/img)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Utazások",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "de77847e-4bbc-4978-be68-ec727d4992bd",
+          "targets": [
+            [
+              "linkText=Utazások",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(1) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Utazások')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Utazások')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.fa-facebook-f",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "126b6c16-19d0-40a0-b19d-d49f17c276ba",
+          "targets": [
+            [
+              "css=.fa-facebook-f",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/footer/div/section/a/i)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.btn:nth-child(2)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7c123853-3062-462e-bbe6-9594f412b875",
+          "targets": [
+            [
+              "css=.btn:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/footer/div/section/a[2])[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'https://www.instagram.com/lac1_1/')])[1]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.btn-floating:nth-child(3)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "92f80a4c-e097-48a9-96f6-efa211179237",
+          "targets": [
+            [
+              "css=.btn-floating:nth-child(3)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/footer/div/section/a[3])[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, 'https://github.com/Mlevi0/legitarsasag')])[1]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Foglalás",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "10429448-ed84-474e-aa0c-84a29f269fa9",
+          "targets": [
+            [
+              "linkText=Foglalás",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(2) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Foglalás')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li[2]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/foglalas')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Foglalás')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a5a86668-8d0d-414c-84be-1761ad314f86",
+      "name": "teszt2",
+      "commands": [
+        {
+          "id": "24b35ebf-9951-4f98-9ea1-d42109ccf809",
+          "command": "open",
+          "target": "http://localhost:5000/",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "css=.navbar-toggler-icon",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "5bcac259-3025-4a45-8b42-9624763d6469",
+          "targets": [
+            [
+              "css=.navbar-toggler-icon",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/nav/div/button/span)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Foglalás",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "034552b9-b5ac-4477-9a18-776a2841d657",
+          "targets": [
+            [
+              "linkText=Foglalás",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(2) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Foglalás')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li[2]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/foglalas')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Foglalás')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.offset-md-4 .radio",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "7069806c-e646-4375-a2a5-c960c70d8210",
+          "targets": [
+            [
+              "css=.offset-md-4 .radio",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div/div[2]/div/label)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.offset-md-2 .radio",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "765ee2e6-73f9-4b54-9562-5f42099f7e06",
+          "targets": [
+            [
+              "css=.offset-md-2 .radio",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div/div/div/label)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//label[contains(.,'Oda-vissza')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.offset-md-4 .radio",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "c7de7f24-d386-4a43-bbd0-ad36faa9a387",
+          "targets": [
+            [
+              "css=.offset-md-4 .radio",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div/div[2]/div/label)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=honnanvaros",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "61f5e62a-aa64-4740-b514-392c841a051a",
+          "targets": [
+            [
+              "id=honnanvaros",
+              "id"
+            ],
+            [
+              "css=#honnanvaros",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='honnanvaros'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[2]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=honnanvaros",
+          "value": "asdasd",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ea47b3e9-906f-454c-8326-bf0f2c05a36f",
+          "targets": [
+            [
+              "id=honnanvaros",
+              "id"
+            ],
+            [
+              "css=#honnanvaros",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='honnanvaros'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[2]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=hovavaros",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "aa82a142-c743-4dc2-94da-69cb48c73e4f",
+          "targets": [
+            [
+              "id=hovavaros",
+              "id"
+            ],
+            [
+              "css=#hovavaros",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='hovavaros'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[2]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=hovavaros",
+          "value": "asdasdasd",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "412604ff-2c09-4ad2-b5ba-fdc9a4246a91",
+          "targets": [
+            [
+              "id=hovavaros",
+              "id"
+            ],
+            [
+              "css=#hovavaros",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='hovavaros'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[2]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=indulas",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "922c9409-9b9a-4ecd-a138-9a951858f28e",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=indulas",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9c10a6aa-35f1-4244-af6c-691fc69496a9",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=indulas",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "8a4f7ae7-afba-4a3d-a310-bacd4f808c84",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=indulas",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "1626a1c7-4767-4a8f-8085-b4655cd0759e",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=indulas",
+          "value": "2022-12-01",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "f4f7c06e-c21c-41e4-9dce-851da04bda73",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=indulas",
+          "value": "2022-12-11",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "a457c9e7-cc40-4895-a3ac-8729e252fab6",
+          "targets": [
+            [
+              "id=indulas",
+              "id"
+            ],
+            [
+              "css=#indulas",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='indulas'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "id=erkezes",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "b12d6d23-6101-4aac-8a72-6519f90a0585",
+          "targets": [
+            [
+              "id=erkezes",
+              "id"
+            ],
+            [
+              "css=#erkezes",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='erkezes'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=erkezes",
+          "value": "2023-12-02",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "1b543401-bed6-4b9e-8de3-a437546ce3f5",
+          "targets": [
+            [
+              "id=erkezes",
+              "id"
+            ],
+            [
+              "css=#erkezes",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='erkezes'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=erkezes",
+          "value": "2023-12-22",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "97d99a3f-b825-4f0a-9290-fc6958c40e7c",
+          "targets": [
+            [
+              "id=erkezes",
+              "id"
+            ],
+            [
+              "css=#erkezes",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='erkezes'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[3]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=felnottekszama",
+          "value": "1",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "fed7adf8-c155-4466-973c-c1a5ca5d5877",
+          "targets": [
+            [
+              "id=felnottekszama",
+              "id"
+            ],
+            [
+              "name=felnottekszama",
+              "name"
+            ],
+            [
+              "css=#felnottekszama",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='felnottekszama'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[4]/div/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=gyerekekszama",
+          "value": "5",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "08b3252e-3bcb-4f1f-82ef-4674b4625410",
+          "targets": [
+            [
+              "id=gyerekekszama",
+              "id"
+            ],
+            [
+              "name=gyerekekszama",
+              "name"
+            ],
+            [
+              "css=#gyerekekszama",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='gyerekekszama'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[4]/div[2]/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.outline-none",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "5f2da1b9-052b-4621-82f4-54882b79788a",
+          "targets": [
+            [
+              "css=.outline-none",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[4]/div[3]/div/select)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "select",
+          "target": "css=.outline-none",
+          "value": "label=Economy",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "6bb60570-45f6-459a-89d2-c19e25b7c8ae",
+          "targets": [
+            [
+              "css=.outline-none",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/div[4]/div[3]/div/select)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.btn-primary",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "9878885c-fc23-4cb2-ad24-88de69ea7020",
+          "targets": [
+            [
+              "css=.btn-primary",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[4]/form/button)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//button[contains(.,'Foglalás')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.navbar-toggler-icon",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "db1e5aa3-ff6a-4d85-b156-d7a01e5c13cc",
+          "targets": [
+            [
+              "css=.navbar-toggler-icon",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/nav/div/button/span)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Rólunk",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "8389b0c7-005a-4a79-8772-6a541f6539a5",
+          "targets": [
+            [
+              "linkText=Rólunk",
+              "linkText"
+            ],
+            [
+              "css=.nav-item:nth-child(3) > .nav-link",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Rólunk')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//div[@id='navbarSupportedContent']/ul/li[3]/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '/aboutus')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Rólunk')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "mouseDown",
+          "target": "css=.col-lg-3:nth-child(1) .pt-2",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "86b89a98-27a6-4316-ae05-1983bbd0945e",
+          "targets": [
+            [
+              "css=.col-lg-3:nth-child(1) .pt-2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div/div/div[2]/h4)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "mouseUp",
+          "target": "css=.col-lg-3:nth-child(1) > .card",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "edc5b011-0b34-4203-b88c-95a3b8815ecf",
+          "targets": [
+            [
+              "css=.col-lg-3:nth-child(1) > .card",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.col-lg-3:nth-child(1) > .card",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "2704e04a-d483-47df-b71d-3d58e450ba96",
+          "targets": [
+            [
+              "css=.col-lg-3:nth-child(1) > .card",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.col-lg-3:nth-child(2) img",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "a34b061b-f574-4707-a637-3602f2bdecba",
+          "targets": [
+            [
+              "css=.col-lg-3:nth-child(2) img",
+              "css:finder"
+            ],
+            [
+              "xpath=(//img[@alt='Huszár Botond profilképe'])[1]",
+              "xpath:img"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[2]/div/div/img)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.col-lg-3:nth-child(3) > .card",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "b90d8b3a-29fd-4785-b87e-e4c9e83aacf9",
+          "targets": [
+            [
+              "css=.col-lg-3:nth-child(3) > .card",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='app']/div/div[2]/div[3]/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
