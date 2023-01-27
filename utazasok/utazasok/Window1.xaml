@@ -35,15 +35,12 @@
         <Button Content="Ár kiszámitása" HorizontalAlignment="Center" Margin="0,513,0,0"
                 VerticalAlignment="Top" Width="158" Height="48" Click="Button_Click"/>
 
-        <Label Content="Közvetlen járat:" HorizontalAlignment="Center" Margin="0,10,0,0"
-               VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
-
-        <Label Content="Legolcsóbb járat:" HorizontalAlignment="Center" Margin="0,128,0,0"
+        <Label Content="Közvetlen járat:" HorizontalAlignment="Center" Margin="0,181,0,0"
                VerticalAlignment="Top" Height="38" Width="138" FontSize="15"/>
 
         <Label x:Name="kozvetlen_jarat" HorizontalContentAlignment="Center"
-               HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top"
-               Height="54" Width="202" Background="White" />
+               HorizontalAlignment="Left" Margin="321,239,0,0" VerticalAlignment="Top"
+               Height="53" Width="202" Background="White" />
 
         <Label Content="Hány ember?" HorizontalAlignment="Center" Margin="0,308,0,0"
                VerticalAlignment="Top" Height="42" Width="114" FontSize="16"/>
@@ -53,10 +50,6 @@
                  Width="120" Height="33" Text="{Binding emberek, Mode=TwoWay,
                  UpdateSourceTrigger=PropertyChanged}"/>
 
-        <Label x:Name="kozvetlen_jarat_Copy" HorizontalContentAlignment="Center" 
-               HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top"
-               Height="54" Width="202" Background="White" />
-
         <Label Content="A megadott mennyiségből hány 16 év ALATTI gyermek?&#xD;&#xA;(Ha 0 akkor is irja oda kérem hogy '0')" HorizontalAlignment="Center"
                Margin="0,393,0,0" VerticalAlignment="Top" Height="65" Width="406" FontSize="16"/>
 
@@ -64,6 +57,11 @@
             TextWrapping="Wrap" VerticalAlignment="Top" 
             Width="120" Height="33" Text="{Binding gyermekek, Mode=TwoWay,
             UpdateSourceTrigger=PropertyChanged}"/>
+        <Label Content="Tájékoztató: Ezen az oldalon ki lehet választani, hogy honnan hová szeretne repülni.&#xD;&#xA; 
+               Ezen kivül megkell adni, hogy összesen hányan szeretnének utazni és ebből hány gyermek. &#xD;&#xA;
+               Ezután egy pontos összeg fog megjelenni hogy mennyibe kerülne az utazás.&#xD;&#xA;
+               FONTOS: 16 év alatt nem szabad egyedül repülni!
+               " HorizontalAlignment="Left" Margin="90,26,0,0" VerticalAlignment="Top" Height="109" Width="737" FontSize="16"/>
 
 
     </Grid>
